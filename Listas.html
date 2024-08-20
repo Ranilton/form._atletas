@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Listas</title>
+    <script type="text/javascript" src="script.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+    <link rel="stylesheet" href="styles_listas.css" />
+  </head>
+  <body>
+    <header>
+      <div class="cabeça">
+        <div class="logo">
+          <img id="id" src="assets/logotipo.png" alt="logo" />
+          <h3>
+            <div>EREFEM.</div>
+            <div>Cristiano Barbosa e Silva</div>
+          </h3>
+        </div>
+
+        <div class="cabeça-conteudo">
+          <nav class="nav">
+            <button class="btn-menu">&#9776;</button>
+            <ul class="menu">
+              <li id="fecha"><a>X</a></li>
+              <li><a href="formulário.html">Home</a></li>
+              <li><a href="listas.html">Listas</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <div class="search">
+      <input type="search" id="search" name="search" value="search" required />
+      <label for="lupa" class="lupa"
+        ><img src="assets/lupa.png" width="25px" alt=""
+      /></label>
+      <br />
+    </div>
+    pedir botão para gerar impressão
+
+    <div class="tabela1">
+      <h2>Tabela de Alunos</h2>
+      <button class="todas" onclick="gerarTodasAsCarteirinhas()">
+        Visualizar Todas as Carteirinhas
+      </button>
+      <table>
+        <thead>
+          <tr>
+            <th>Foto</th>
+            <th>Matrícula</th>
+            <th>Nome</th>
+            <th>Categoria</th>
+            <th>Registro</th>
+            <th>Equipe/Escola</th>
+            <th>Data de Nascimento</th>
+            <th>Esporte</th>
+            <th>CPF</th>
+            <th>Ação</th>
+             <!-- Adicionei mais esta coluna  -->
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <img
+                src="./assets/aline.jpg"
+                alt="foto1"
+                width="50"
+                height="50"
+              />
+            </td>
+            <td>123456</td>
+            <td>Aline</td>
+            <td>juvenil</td>
+            <td>987654</td>
+            <td>Escola A</td>
+            <td>01/01/2000</td>
+            <td>voley</td>
+            <td>111.222.333-44</td>
+            <td><button onclick="gerarCarteirinha(this)">Ver Mais</button></td>
+            <!-- Adicionei mais esta coluna  -->
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="./assets/atleta.jpg"
+                alt="foto2"
+                width="50"
+                height="50"
+              />
+            </td>
+            <td>789012</td>
+            <td>Maria Souza</td>
+            <td>mirim</td>
+            <!-- Adicionei mais esta coluna  -->
+            <td>654321</td>
+            <td>Escola B</td>
+            <td>02/02/2001</td>
+            <td>handebol</td>
+            <!-- Adicionei mais esta coluna  -->
+            <td>555.666.777-88</td>
+            <td><button onclick="gerarCarteirinha(this)">Ver Mais</button></td>
+          </tr>
+          <tr>
+            <td>
+              <img src="./assets/foto.png" alt="foto3" width="50" height="50" />
+            </td>
+            <td>123456</td>
+            <td>Ranilton</td>
+            <td>juvenil</td>
+            <!-- Adicionei mais esta coluna  -->
+            <td>987654</td>
+            <td>Escola A</td>
+            <td>01/01/2000</td>
+            <td>voley</td>
+            <!-- Adicionei mais esta coluna  -->
+            <td>111.222.333-44</td>
+            <td><button onclick="gerarCarteirinha(this)">Ver Mais</button></td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="./assets/Captain_Marvel.jpg"
+                alt="foto4"
+                width="50"
+                height="50"
+              />
+            </td>
+            <td>789012</td>
+            <td>capitam mavel</td>
+            <td>pre-mirim</td>
+            <!-- Adicionei mais esta coluna  -->
+            <td>654321</td>
+            <td>Escola B</td>
+            <td>02/02/2001</td>
+            <td>handebol</td>
+            <!-- Adicionei mais esta coluna  -->
+            <td>555.666.777-88</td>
+            <td><button onclick="gerarCarteirinha(this)">Ver Mais</button></td>
+          </tr>
+          <tr>
+            <td>
+              <img src="./assets/wv.png" alt="foto5" width="50" height="50" />
+            </td>
+            <td>789013</td>
+            <td>Wolverine</td>
+            <td>juvenil</td>
+            <!-- Adicionei mais esta coluna  -->
+            <td>654322</td>
+            <td>Escola C</td>
+            <td>02/02/2001</td>
+            <td>handebol</td>
+            <!-- Adicionei mais esta coluna  -->
+            <td>555.666.777-88</td>
+            <td><button onclick="gerarCarteirinha(this)">Ver Mais</button></td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="./assets/noturno.jpg"
+                alt="foto5"
+                width="50"
+                height="50"
+              />
+            </td>
+            <td>789013</td>
+            <td>Noturno</td>
+            <td>juvenil</td>
+            <!-- Adicionei mais esta coluna  -->
+            <td>654345</td>
+            <td>Escola C</td>
+            <td>02/02/2001</td>
+            <td>handebol</td>
+            <!-- Adicionei mais esta coluna  -->
+            <td>555.666.777-88</td>
+            <td>
+              <button id="openModalBtn" onclick="gerarCarteirinha(this)">
+                Ver Mais
+              </button>
+            </td>
+          </tr>
+          <!-- Adicione mais linhas conforme necessário -->
+        </tbody>
+      </table>
+    </div>
+
+    <div class="modal" id="modal">
+      <div class="doc">
+        <div class="branco">
+          <div class="verde">
+            <div class="topo">
+              <img src="assets/JEMB'S.jpg" alt="jembs" />
+              <div>
+                <h3>
+                  JOGOS ESCOLARES MUNICIPAL <br />
+                  DOS BARREIROS- ANOo
+                </h3>
+                <h4>SUB-09</h4>
+              </div>
+            </div>
+            <div class="div-nome">
+              <h4>Nome Completo</h4>
+              <p id="nome">nombre</p>
+
+              <div class="equipe">
+                <div>
+                  <h4>Equipe/Escola</h4>
+                  <p id="equipe">EREFEM C B e Silva</p>
+                </div>
+                <div>
+                  <h4>Data de Nascimento</h4>
+                  <p id="dataNascimento">13/10/1989</p>
+                </div>
+              </div>
+
+              <div class="foto-registro">
+                <img
+                  id="fotoPreview2"
+                  src="assets/default.jpg"
+                  alt="previa de la foto"
+                />
+                <div>
+                  <h4>Registro</h4>
+                  <p id="registro">NAO TEM</p>
+                  <h4>CPF</h4>
+                  <p id="cpf">nao tem</p>
+                  <h4>Matrícula</h4>
+                  <p id="matricula">1234567</p>
+                </div>
+                <img
+                  id="prefeitura"
+                  class="brasão"
+                  src="assets/prefeituradosbarreiros.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="teste">
+          <button onclick="generatePDF()" class="button_pdf">Gerar PDF</button>
+          <div>
+            <h4>Categoria</h4>
+            <p id="categoria">NAO TEM</p>
+            <h4>Esporte</h4>
+            <p id="esporte">nao tem</p>
+          </div>
+        </div>
+        <div>
+          <span class="close" onclick="fecharModal()">&times;</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="carteirinhas-container" id="carteirinhas-container"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EREFEM</title>
+    <script type="text/javascript" src="script.js"></script>
+    <link rel="stylesheet" href="styles_formulário.css" />
+   
+  </head>
+  <body>
+    <header>
+      <div class="cabeça">
+        <div class="logo">
+          <img id="id" src="assets/logotipo.png" alt="logo" />
+          <h3>
+            <div>EREFEM.</div>
+            <div>Cristiano Barbosa e Silva</div>
+          </h3>
+        </div>
+        <div class="cabeça-conteudo">
+          <nav class="nav">
+            <button class="btn-menu">&#9776;</button>
+            <ul class="menu">
+              <li id="fecha"><a>X</a></li>
+              <li><a href="formulário.html">Home</a></li>
+              <li><a href="listas.html">Listas</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <div class="conteúdo">
+      <aside class="corpo"><!--coluna esquerda-->
+        <img src="assets/escola.jpg" alt="escola" />
+        <p id="texto">
+          &emsp;&emsp;É um facto estabelecido de que um leitor é distraído pelo
+          conteúdo legível de uma página quando analisa a sua mancha gráfica.
+          <br />&emsp;&emsp;É um facto estabelecido de que um leitor é distraído
+          pelo conteúdo legível de uma página quando analisa a sua mancha
+          gráfica. <br />&emsp;&emsp;É um facto estabelecido de que um leitor é
+          distraído pelo conteúdo legível de uma página quando analisa a sua
+          mancha gráfica.
+        </p>
+      </aside> <!--fim coluna esquerda-->
+      <div class="coluna-vazia"></div> <!--coluna vazia-->
+      <div class="box"> <!--Inicio do formulário-->
+        <form id="atletaForm" action="">
+          <fieldset>
+            <legend><b>Fórmulário dos Atletas</b></legend>
+            <br />
+            <div class="inputBox">
+              <input
+                type="text"
+                name="nome"
+                id="nome"
+                class="inputUser"
+                required
+              />
+              <label for="nome" class="labelInput">Nome completo</label>
+            </div>
+            <br />
+            <label for="data_nascimento" class="data"
+              ><b>Data de Nascimento:</b></label
+            >
+            <input
+              type="date"
+              name="data_nascimento"
+              id="data_nascimento"
+              required
+            />
+            <span id="data_formatada"></span>
+            <br /><br />
+            <div class="inputBox">
+              <input
+                type="text"
+                name="escola"
+                id="escola"
+                class="inputUser"
+                required
+              />
+              <label for="escola" class="labelInput">Escola/Equipe</label>
+            </div>
+            <br />
+            <div class="grupo_radio">
+              <div>
+                <p class="radio">Sexo:</p>
+                <input
+                  type="radio"
+                  id="feminino"
+                  name="genero"
+                  value="feminino"
+                  required
+                />
+                <label for="feminino" class="radio">Feminino</label>
+                <br />
+                <input
+                  type="radio"
+                  id="masculino"
+                  name="genero"
+                  value="masculino"
+                  required
+                />
+                <label for="masculino" class="radio">Masculino</label>
+                <br /><br />
+              </div>
+              <div>
+                <p class="radio">Categoria:</p>
+                <input
+                  type="radio"
+                  id="mirim"
+                  name="categoria"
+                  value="mirim"
+                  required
+                />
+                <label for="mirim" class="radio">Mirim</label>
+                <br />
+                <input
+                  type="radio"
+                  id="pre-mirim"
+                  name="categoria"
+                  value="pre-mirim"
+                  required
+                />
+                <label for="pre-mirim" class="radio">Pré-Mirim</label>
+                <br />
+                <input
+                  type="radio"
+                  id="juvenil"
+                  name="categoria"
+                  value="juvenil"
+                  required
+                />
+                <label for="juvenil" class="radio">Juvenil</label>
+                <br /><br />
+              </div>
+              <div>
+                <label for="juegos" class="esportes">Escolha o Esporte:</label
+                ><br />
+                <select id="juegos" name="tipo_de_juego">
+                  <option value="accion">---</option>
+                  <option value="corrida">Corrida</option>
+                  <option value="futebol">Futebol</option>
+                  <option value="futsal">Futsal</option>
+                  <option value="handebol">Handebol</option>
+                  <option value="karate">Karatê</option>
+                  <option value="voley">Voley</option>
+                  <option value="outro">Outro</option>
+                </select>
+                <br />
+              </div>
+              <br />
+            </div>
+            <div class="inputBox">
+              <input
+                type="text"
+                name="matricula"
+                id="matricula"
+                class="inputUser"
+                required
+              />
+              <label for="matricula" class="labelInput">Matrícula</label>
+            </div>
+            <br /><br />
+            <div class="RC">
+              <div class="inputBox">
+                <input
+                  type="text"
+                  name="registro"
+                  id="registro"
+                  class="inputUser"
+                  required
+                />
+                <label for="registro" class="labelInput">Nº Registro</label>
+              </div>
+              <div class="inputBox">
+                <input
+                  type="text"
+                  name="cpf"
+                  id="cpf"
+                  class="inputUser"
+                  required/>
+                <br />
+                <label for="estado" class="labelInput">Nº CPF</label>
+              </div>
+            </div>
+            <br /><br />
+            <div class="inputBox">
+              <input
+                type="tel"
+                name="telefone"
+                id="telefone"
+                class="inputUser"
+                required
+              />
+              <label for="telefone" class="labelInput">Telefone</label>
+            </div>
+            <br /><br />
+            <div class="inputBox">
+              <input
+                type="text"
+                name="endereco"
+                id="endereco"
+                class="inputUser"
+                required
+              />
+              <label for="endereco" class="labelInput">Endereço</label>
+            </div>
+            <br>
+            <img id="fotoPreview" src="#" alt="Vista previa de la foto" />
+            <br>
+            <label for="foto">Foto:</label>
+            <input
+              type="file"
+              id="foto"
+              name="foto"
+              accept="image/*"
+              onchange="previewFoto(event)"
+              required
+            />
+            <br /><br />
+            <input type="submit" name="submit" id="submit" onclick="gerarCarteirinha(this)"/>
+          </fieldset>
+        </form>
+      </div> <!--fim do formulário-->
+    </div>
+    <div class="modal" id="modal"> <!--MODAL-->
+      <div class="doc"> <!--inicio carteirinha-->
+        <div class="branco">
+          <div class="verde">
+            <div class="topo">
+              <img src="assets/JEMB'S.jpg" alt="jembs" />
+              <div>
+                <h3>
+                  JOGOS ESCOLARES MUNICIPAL <br>
+                  DOS BARREIROS- 2025</h3>
+                <h4>SUB-09</h4>
+              </div>
+            </div>
+            <div class="div-nome">
+              <h4>Nome Completo</h4>
+              <p id="nomeCarteirinha">nombre</p>
+             <div class="equipe">
+              <div>
+                <h4>Equipe/Escola</h4> 
+                <p id="escolaCarteirinha">EREFEM C B e Silva</p>
+              </div>
+              <div>
+                <h4>data de nascimento</h4> 
+                <p id="dataNascimentoCarteirinha">13/10/1989</p>
+              </div>
+             </div>
+              <div class="foto-registro">
+               <img id="fotoPreview2" src="" alt="previa de la foto"/>
+                <div>
+                  <h4>Registro</h4> 
+                  <p id="registroCarteirinha">NAO TEM</p>
+                  <h4>CPF</h4> 
+                  <p id="cpfCarteirinha">nao tem</p>
+                  <h4>Matrícula</h4> 
+                  <p id="matriculaCarteirinha">1234567</p>
+                </div>
+                <img id="prefeitura" class="brasão" src="assets/prefeituradosbarreiros.jpg" alt="">
+              </div> 
+            </div> 
+          </div>
+        </div>
+        <button onclick="generatePDF()" class="button_pdf">Gerar PDF</button>
+        <span class="close" onclick="fecharModal()">&times;</span>
+      </div> <!--fim carteirinha-->
+    </div> <!--MODAL-->
+
+   <footer>
+      <div>
+        <a href="https://www.instagram.com/erefemcristianobarbosa?igsh=bm1naWFrbWZzYThw">
+          <img src="./assets/instagram.svg"></img>
+          <p>Intagram</p>
+         </a>
+      </div>
+    </footer>
+    
+    <script src="script.js"></script>
+  </body>
+</html>
+
+

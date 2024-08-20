@@ -1,0 +1,296 @@
+:root {
+  --white: #fff;
+  --amarelo: rgba(170, 159, 7, 0.877);
+  --verde: rgba(31, 134, 0, 0.829);
+  --verde-escuro: rgb(48, 83, 2);
+  --red: #ff0000;
+  --preto: black;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: linear-gradient(
+    to right,
+    rgb(225, 226, 226),
+    rgb(153, 154, 155)
+  );
+}
+header {
+  width: 100%;
+  text-align: justify;
+  position: sticky;
+  top: 0;
+  padding: 10px;
+  background-color: rgba(170, 159, 7, 0.877);
+}
+.cabeça {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(31, 134, 0, 0.829);
+  margin: 5px;
+}
+.logo h3 {
+  display: flex;
+  color: #fff;
+  font-size: 20pt;
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+#id {
+  width: 80px;
+  height: 80px;
+  padding: 5px;
+  border-radius: 40px;
+}
+.cabeça-conteudo {
+  display: flex;
+  margin: 5px;
+  width: auto;
+}
+nav {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 8px;
+  padding: 0;
+  width: 100%;
+  transition: all 1s;
+}
+nav li {
+  margin: 0 10px;
+  border-radius: 10px;
+}
+.menu a {
+  display: block;
+  padding: 16px;
+  border-radius: 8px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15pt;
+}
+.menu a:hover {
+  color: var(--red);
+  transition: all 1s;
+}
+.btn-menu {
+  display: none;
+}
+#fecha {
+  display: none;
+}
+/* incio dos conteúdos*/
+.search {
+  display: flex;
+  margin: 5px 15px;
+  padding: 5px 10px;
+  background-color: var(--verde);
+}
+.todas {
+  margin: 15px 0px;
+  background-color: var(--amarelo);
+}
+.tabela1 {
+  margin: 15px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+table,
+th,
+td {
+  border: 1px solid black;
+}
+th,
+td {
+  padding: 8px;
+  text-align: left;
+}
+th {
+  background-color: #f2f2f2;
+}
+button {
+  padding: 5px 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #45a049;
+}
+
+.button_pdf {
+  height: 50px;
+  padding: 10px;
+  margin: 25px;
+  background-color: #34aa38;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.button_pdf:hover {
+  background-color: #8fa045;
+}
+
+.carteirinhas-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px;
+
+}
+.carteirinha {
+  width: auto;
+  height: auto;
+  margin: 10px 10px 10px 10px;
+  
+  border: 1px solid black;
+  padding: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* carteirinha*/
+.doc {
+  display: flex;
+  width: 756px;
+  margin: 20px auto;
+  background-color: white;
+  border: 1px solid #ccc;
+
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.branco {
+  max-width: 756px;
+  max-height: 567px;
+  
+}
+.verde {
+  width: 15cm;
+  height: 10cm;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: var(--verde-escuro);
+}
+
+.topo {
+  display: flex;
+  text-align: center;
+  margin-bottom: 5px;
+}
+.topo img {
+  width: 80px;
+  height: 80px;
+  border-radius: 5px;
+}
+
+.topo h3,
+.topo h4 {
+  margin: 0px 10px 5px 45px;
+  color: var(--white);
+}
+/*.div-nome {
+  margin: 5px;
+}*/
+.div-nome h4 {
+  margin-bottom: 5px;
+  color: var(--white);
+}
+.div-nome p {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 4px;
+  color: black;
+  background-color: #fff;
+  border-radius: 5px;
+}
+.equipe {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+.equipe div {
+  width: 48%;
+}
+.foto-registro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#fotoPreview2 {
+  width: 3cm;
+  height: 4cm;
+  object-fit: cover;
+  border-radius: 5px;
+  border: 1px solid #000000;
+}
+.foto-registro div {
+  flex-grow: 1;
+  margin-left: 15px;
+  margin-right: 20px;
+}
+.brasão {
+  width: 100px;
+  height: auto;
+  border-radius: 5px;
+}
+.button_pdf {
+  height: 50px;
+  padding: 10px;
+  margin: 25px;
+  background-color: #34aa38;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.button_pdf:hover {
+  background-color: #8fa045;
+}
+.teste div{
+  margin: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #0000fbae;
+}
+.teste h4{
+  padding: 5px;
+}
+.modal {
+  display: none; /* Inicia oculto */
+  position: fixed;
+  z-index: 1000;
+  left: 10%;
+  top: 20%;
+  width: 80%;
+  height: 80%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
